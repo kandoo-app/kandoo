@@ -4,92 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Kandoo | کندو - خوش آمدید</title>
-<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body {
-    height: 100%;
-    font-family: 'Vazirmatn', sans-serif;
-    background: #f7f3e9;
+  html, body { height: 100%; overflow: hidden; background: #f7f3e9; }
+  .wrap { position: relative; width: 100%; height: 100%; }
+  .bg-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .btn {
+    display: block;
+    position: absolute;
+    width: 82%;
+    left: 9%;
   }
-  .wrap {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 70px 24px 30px;
-  }
-  .logo-wrap { width: 130px; height: 130px; position: relative; display: flex; align-items: center; justify-content: center; }
-  .logo-wrap svg { width: 100%; height: 100%; overflow: visible; }
-  .k-letter {
-    position: absolute; font-size: 58px; font-weight: 900; color: #0d4433;
-    font-family: Arial, sans-serif; top: 50%; left: 50%; transform: translate(-50%, -52%);
-  }
-  .app-name { color: #0d4433; font-size: 34px; font-weight: 900; margin-top: 14px; }
-
-  .welcome { color: #0d4433; font-size: 28px; font-weight: 900; margin-top: 50px; text-align: center; }
-  .subtitle { color: #5a6b62; font-size: 15px; margin-top: 12px; text-align: center; }
-  .squiggle { margin-top: 8px; }
-
-  .login-btn {
-    width: 100%; max-width: 380px; background: #0d4433; color: #fff; border: none;
-    border-radius: 30px; padding: 17px; font-family: 'Vazirmatn', sans-serif; font-size: 17px;
-    font-weight: 700; margin-top: 46px; display: flex; align-items: center; justify-content: center;
-    gap: 10px; cursor: pointer;
-  }
-  .signup-btn {
-    width: 100%; max-width: 380px; background: transparent; color: #0d4433; border: 2px solid #0d4433;
-    border-radius: 30px; padding: 15px; font-family: 'Vazirmatn', sans-serif; font-size: 17px;
-    font-weight: 700; margin-top: 14px; display: flex; align-items: center; justify-content: center;
-    gap: 10px; cursor: pointer;
-  }
-  .divider { display: flex; align-items: center; gap: 12px; width: 100%; max-width: 380px; margin-top: 26px; color: #8a998f; font-size: 14px; }
-  .divider .line { flex: 1; height: 1px; background: #ccc; }
-  .google-btn {
-    width: 100%; max-width: 380px; background: #fff; color: #333; border: 1px solid #e0e0e0;
-    border-radius: 30px; padding: 15px; font-family: 'Vazirmatn', sans-serif; font-size: 16px;
-    font-weight: 600; margin-top: 22px; display: flex; align-items: center; justify-content: center;
-    gap: 10px; cursor: pointer;
-  }
-  .terms { color: #7a8a80; font-size: 13px; margin-top: 26px; text-align: center; line-height: 1.8; }
-  .terms a { color: #0d4433; font-weight: 700; text-decoration: underline; }
+  .btn-login { top: 63.5%; height: 6.5%; }
+  .btn-signup { top: 71.5%; height: 6.5%; }
+  .btn-google { top: 84.5%; height: 6.5%; }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="logo-wrap">
-      <svg viewBox="0 0 200 200">
-        <defs>
-          <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f2c14e"/>
-            <stop offset="45%" stop-color="#e8823e"/>
-            <stop offset="100%" stop-color="#d9524a"/>
-          </linearGradient>
-        </defs>
-        <polygon points="100,12 170,53 170,137 100,178 30,137 30,53"
-          fill="none" stroke="url(#hexGrad)" stroke-width="10" stroke-linejoin="round"/>
-        <polygon points="154,50 176,62 176,86 154,74" fill="#8dc36a"/>
-      </svg>
-      <div class="k-letter">k</div>
-    </div>
-    <div class="app-name">کندو</div>
-
-    <div class="welcome">خوش آمدید به کندو</div>
-    <div class="subtitle">برای شروع وارد حساب خود شوید یا یک حساب جدید بسازید</div>
-    <svg class="squiggle" width="120" height="10" viewBox="0 0 120 10">
-      <path d="M2,6 Q20,-2 40,6 T80,6 T118,6" fill="none" stroke="#e8a13a" stroke-width="2.5" stroke-linecap="round"/>
-    </svg>
-
-    <button class="login-btn" onclick="doLogin()">ورود</button>
-    <button class="signup-btn" onclick="window.location.href='login.html'">ثبت‌نام</button>
-
-    <div class="divider"><div class="line"></div><span>یا</span><div class="line"></div></div>
-
-    <button class="google-btn" onclick="alert('ورود با گوگل به زودی فعال می‌شود')">
-      ورود با گوگل
-    </button>
-
-    <div class="terms">با ورود یا ثبت‌نام، <a href="#">قوانین و حریم خصوصی</a> کندو را می‌پذیرید</div>
+    <img class="bg-img" src="file_0000000050b481fd92d0b4fb05d5871d.png" alt="Welcome">
+    <a href="javascript:doLogin()" class="btn btn-login"></a>
+    <a href="login.html" class="btn btn-signup"></a>
+    <a href="javascript:alert('ورود با گوگل به زودی فعال می‌شود')" class="btn btn-google"></a>
   </div>
 
 <script>
